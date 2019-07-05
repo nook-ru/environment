@@ -1,5 +1,7 @@
 ## Как я ставлю свою систему
 
+* [ ] https://robbinespu.gitlab.io/blog/2019/05/06/after-install-fedora-30/
+
 ### Подготовка
 
 Скачиваем образ [Fedora](https://getfedora.org/ru/workstation/).
