@@ -250,6 +250,15 @@ sudo dnf copr enable evana/fira-code-fonts
 sudo dnf install fira-code-fonts
 ```
 
+Устанавливаем шрифты Ubuntu [^ubuntu-fonts]:
+
+```shell=
+sudo dnf copr enable chenxiaolong/ubuntu-fonts
+sudo dnf install ubuntu-family-fonts fontconfig-ubuntu ubuntu-font-gsettings
+```
+
+[^ubuntu-fonts]: [chenxiaolong/ubuntu-fonts](https://copr.fedorainfracloud.org/coprs/chenxiaolong/ubuntu-fonts/)
+
 Установить GNOME Tweek Tool:
 
 ```sh
@@ -273,7 +282,7 @@ sudo dnf install gnome-tweak-tool
   - **Screenshot Tool:** убираем «Показывать иконку». Ставим «Автоматически
     сохранять скриншот» в «Загрузки» с именем `{Y}{m}{d}{H}{M}{S}`. Включаем
     Imgur с автоматическим открытием ссылки.
-- **Шрифты:** моноширный в «Fira Code Retina».
+- **Шрифты:** моноширный в «Fira Code».
 
 Удаляем папки иконок:
 
