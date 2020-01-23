@@ -202,6 +202,16 @@ fi
 SPACESHIP_PROMPT_ORDER=(time user dir host git exit_code line_sep char)
 ```
 
+Устанавливаем [fzf](https://github.com/junegunn/fzf)
+
+```
+$ sudo dnf install fzf
+```
+
+```
+sudo apt-get install fzf
+```
+
 Перезагружаемся.
 
 
