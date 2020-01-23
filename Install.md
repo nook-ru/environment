@@ -203,6 +203,7 @@ SPACESHIP_PROMPT_ORDER=(time user dir host git exit_code line_sep char)
 ```
 
 Устанавливаем [fzf](https://github.com/junegunn/fzf)
+Устанавливаем [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 
 ```
 $ sudo dnf install fzf
