@@ -236,7 +236,7 @@ sudo apt-get install fzf
 Выставляем настройки клавиатуры:
 
 ```sh
-dconf write /org/gnome/desktop/input-sources/xkb-options "['grp_led:caps', 'lv3:ralt_switch', 'misc:typo', 'nbsp:level3', 'lv3:lsgt_switch', 'grp:shift_caps_switch']"
+dconf write /org/gnome/desktop/input-sources/xkb-options "['grp:alt_shift_toggle', 'lv3:ralt_switch', 'misc:typo', 'nbsp:level3', 'caps:none', 'grp_led:scroll']"
 ```
 
 В Терминале:
