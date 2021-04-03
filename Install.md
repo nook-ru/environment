@@ -213,6 +213,16 @@ $ sudo dnf install fzf
 sudo apt-get install fzf
 ```
 
+#### Цветовая схема
+
+1. Monokai Dark из https://github.com/Mayccoll/Gogh
+2. Цветовая схема MC: `modarin256-thin`
+   `~/.config/mc/ini`:
+   ```
+   [Midnight-Commander]
+   skin=modarin256-thin
+   ```
+
 Перезагружаемся.
 
 
