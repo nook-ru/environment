@@ -5,10 +5,11 @@
 https://niklan.net/blog/149
 
 * [fresh](https://github.com/freshshell/fresh) — синхронизация файлов конфигурации между машинами через `git`
+* [gitui](https://github.com/extrawurst/gitui) — удобная работа с git в терминале
 
 ## Gnome Shell
 
-* [Copyq](https://github.com/hluk/CopyQ) — менеджер буфера обмена с историей и индикатором в gnome
+* ~[Copyq](https://github.com/hluk/CopyQ)~ — менеджер буфера обмена с историей и индикатором в gnome
 * [Flameshot](https://github.com/lupoDharkael/flameshot) — удообные скриншоты с редактором и прочими плюшками
 
 ## Редактор изображений
