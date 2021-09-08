@@ -7,6 +7,8 @@ https://niklan.net/blog/149
 * [fresh](https://github.com/freshshell/fresh) — синхронизация файлов конфигурации между машинами через `git`
 * [gitui](https://github.com/extrawurst/gitui) — удобная работа с git в терминале
 
+* [docker-ctop](https://github.com/bcicen/ctop)
+
 ## Gnome Shell
 
 * ~[Copyq](https://github.com/hluk/CopyQ)~ — менеджер буфера обмена с историей и индикатором в gnome
