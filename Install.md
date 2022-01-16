@@ -254,6 +254,12 @@ sudo apt-get update
 sudo apt-get install exa
 ```
 
+#### [duf](https://github.com/muesli/duf)
+
+```
+sudo apt install duf
+```
+
 #### Цветовая схема
 
 1. Monokai Dark из https://github.com/Mayccoll/Gogh
