@@ -260,6 +260,12 @@ sudo apt-get install exa
 sudo apt install duf
 ```
 
+#### [tldr](https://tldr.sh/)
+
+```
+npm install -g tldr
+```
+
 #### Цветовая схема
 
 1. Monokai Dark из https://github.com/Mayccoll/Gogh
