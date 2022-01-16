@@ -220,6 +220,11 @@ sudo apt-get install fzf
 ```
 sudo apt-get install httpie
 ```
+#### [Bat](https://github.com/sharkdp/bat)
+
+```
+sudo apt-get install bat
+```
 
 #### Цветовая схема
 
