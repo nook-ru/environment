@@ -1,97 +1,6 @@
-## Как я ставлю свою систему
+# Установка системы
 
-### Подготовка
-
-Скачиваем образ [Fedora](https://getfedora.org/ru/workstation/).
-Записываем его на USB-флешку:
-
-```sh
-sudo dnf install mediawriter
-```
-
-Записываем на внешний диск:
-
-1. `.Личное/`
-2. `Видео/`
-3. `Dev/`
-4. `.mozilla`
-
-
-### Установка
-
-Запускаем установщик.
-
-1. Английскую раскладку на первое место. Переключение раскладок:
-   «CapsLock (на первую раскладку), Shift+CapsLock (на последнюю раскладку)».
-2. В ручном разбиение диска выбираем автоматически создать разделы.
-3. Переименовываем том в `blackjack`.
-4. Удаляем `root` и `home`.
-5. Создаём `root` снова на весь размер.
-
-Перезагружаемся ещё раз в Live-USB. Подключаем диски установленной системы.
-
-Открываем `etc/fstab`.
-
-Добавляем опцию `noatime` для корневой системы.
-
-Переносим `/tmp` и `/var/tmp` в оперативную память:
-
-```
-none /var/tmp  tmpfs noatime  0 0
-none /tmp/     tmpfs noatime  0 0
-```
-
-Чистим каталоги `tmp` и `var/tmp`.
-
-В BIOS меняем порядок загрузки.
-
-Перезагружаемся в систему. Указываем имя по английски и логин `ai`.
-
-Скопировать `Dev/environment` и локально открыть `Install.md`.
-Поставить на копирование `.Личное` и `.mozilla`.
-
-Указываем имя ноутбуку:
-
-```sh
-sudo hostnamectl set-hostname blackjack
-```
-
-Включаем TRIM:
-
-```sh
-sudo systemctl enable fstrim.timer
-```
-
-Выключаем засыпания в настройках питания.
-
-
-### Обновление системы
-
-Удаляем ненужные пакеты:
-
-```sh
-sudo dnf remove cheese evolution rhythmbox gnome-boxes gnome-documents orca gnome-contacts samba-client gnome-getting-started-docs nautilus-sendto gnome-shell-extension-* libreoffice-* gnome-characters gnome-maps gnome-photos simple-scan virtualbox-guest-additions gedit
-```
-
-Подключаем RPM Fusion:
-
-```sh
-sudo dnf install --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-```
-
-Подключаем Russian Fedora:
-
-```sh
-sudo dnf install --nogpgcheck http://mirror.yandex.ru/fedora/russianfedora/russianfedora/free/fedora/russianfedora-free-release-stable.noarch.rpm http://mirror.yandex.ru/fedora/russianfedora/russianfedora/nonfree/fedora/russianfedora-nonfree-release-stable.noarch.rpm http://mirror.yandex.ru/fedora/russianfedora/russianfedora/fixes/fedora/russianfedora-fixes-release-stable.noarch.rpm
-```
-
-Обновляем систему:
-
-```sh
-sudo dnf update --refresh
-```
-
-### Базовая настройка
+## Базовая настройка
 
 Включаем HiDPI для TTY:
 
@@ -124,7 +33,7 @@ dconf write /org/freedesktop/tracker/miner/files/crawling-interval -2
 Перезагружаемся.
 
 
-### Текстовые редакторы
+## Текстовые редакторы
 
 Устанавливаем GNOME Builder и nano:
 
@@ -143,33 +52,11 @@ flatpak install flathub io.atom.Atom
 Устанавливаем темы и плагины из [`Atom.md`](./Atom.md).
 
 
-### Личные файлы
+## Личные файлы
 
-Скопировать конфиги:
+[dotfiles](https://github.com/nook-ru/dotfiles) && fresh
 
-```sh
-~/Dev/environment/bin/copy-env system
-```
-
-Устанавливаем пакеты для расшифровки:
-
-```sh
-sudo dnf install fuse-encfs
-```
-
-Скопировать `.Личное/`. Открыть его и скопировать папки `.ssh/`, `.gnupg/` и `.kube/`.
-
-Ставим правильные права на ключи:
-
-```sh
-chmod 744 ~/.ssh ~/.gnupg/
-chmod 644 ~/.ssh/* ~/.gnupg/*
-chmod 700 ~/.gnupg/private-keys-v1.d
-chmod 600 ~/.ssh/id_rsa ~/.ssh/id_ed25519 ~/.gnupg/secring.gpg ~/.gnupg/private-keys-v1.d/* ~/.gnupg/random_seed
-```
-
-
-### Терминал
+## Терминал
 
 Устанавливаем zsh:
 
@@ -202,7 +89,7 @@ fi
 SPACESHIP_PROMPT_ORDER=(time user dir host git exit_code line_sep char)
 ```
 
-#### fzf
+### fzf
 
 Устанавливаем [fzf](https://github.com/junegunn/fzf)
 Устанавливаем [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
@@ -215,30 +102,30 @@ $ sudo dnf install fzf
 sudo apt-get install fzf
 ```
 
-#### [HTTPie](https://httpie.io/cli)
+### [HTTPie](https://httpie.io/cli)
 
 ```
 sudo apt-get install httpie
 ```
-#### [Bat](https://github.com/sharkdp/bat)
+### [Bat](https://github.com/sharkdp/bat)
 
 ```
 sudo apt-get install bat
 ```
 
-#### [ncdu](sudo apt install ncdu)
+### [ncdu](sudo apt install ncdu)
 
 ```
 sudo apt-get install ncdu
 ```
 
-#### [fd](https://github.com/sharkdp/fd#on-ubuntu)
+### [fd](https://github.com/sharkdp/fd#on-ubuntu)
 
 ```
 sudo apt install fd-find
 ```
 
-#### [exa](https://the.exa.website/docs)
+### [exa](https://the.exa.website/docs)
 
 Ubuntu 20.10+:
 
@@ -254,19 +141,19 @@ sudo apt-get update
 sudo apt-get install exa
 ```
 
-#### [duf](https://github.com/muesli/duf)
+### [duf](https://github.com/muesli/duf)
 
 ```
 sudo apt install duf
 ```
 
-#### [tldr](https://tldr.sh/)
+### [tldr](https://tldr.sh/)
 
 ```
 npm install -g tldr
 ```
 
-#### Цветовая схема
+### Цветовая схема
 
 1. Monokai Dark из https://github.com/Mayccoll/Gogh
 2. Цветовая схема MC: `modarin256-thin`
@@ -279,7 +166,7 @@ npm install -g tldr
 Перезагружаемся.
 
 
-### Настройка GNOME
+## Настройка GNOME (outdated)
 
 Ставим `seahorse` и выключаем пароль со связки ключей.
 
@@ -367,7 +254,7 @@ gsettings set org.gnome.desktop.app-folders folder-children "['']"
 Оставить в доке по-умолчанию только Фаерфокс, Наутилус и Терминал.
 
 
-### Папки
+## Папки (outdated)
 
 Создаём шаблон пустого файла:
 
@@ -403,7 +290,7 @@ rm -R ~/Документы ~/Изображения ~/Музыка ~/Общед�
 ```
 
 
-### Остальное ПО
+## Остальное ПО (outdated)
 
 Устанавливаем кодеки:
 
@@ -439,7 +326,7 @@ flatpak install flathub org.gimp.GIMP
 ```
 
 
-### Разработка
+## Разработка
 
 Устанавливаем пакеты:
 
