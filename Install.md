@@ -226,6 +226,34 @@ sudo apt-get install httpie
 sudo apt-get install bat
 ```
 
+#### [ncdu](sudo apt install ncdu)
+
+```
+sudo apt-get install ncdu
+```
+
+#### [fd](https://github.com/sharkdp/fd#on-ubuntu)
+
+```
+sudo apt install fd-find
+```
+
+#### [exa](https://the.exa.website/docs)
+
+Ubuntu 20.10+:
+
+```
+sudo apt install exa
+```
+
+Ubuntu 20.04:
+
+```
+sudo add-apt-repository ppa:spvkgn/exa
+sudo apt-get update
+sudo apt-get install exa
+```
+
 #### Цветовая схема
 
 1. Monokai Dark из https://github.com/Mayccoll/Gogh
