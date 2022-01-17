@@ -113,7 +113,7 @@ sudo apt-get install httpie
 sudo apt-get install bat
 ```
 
-### [ncdu](sudo apt install ncdu)
+### [ncdu](https://dev.yorhel.nl/ncdu/scr)
 
 ```
 sudo apt-get install ncdu
