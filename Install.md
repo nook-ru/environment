@@ -143,6 +143,8 @@ sudo apt-get install exa
 
 ### [duf](https://github.com/muesli/duf)
 
+Скачать и установить `deb` из [релизов github](https://github.com/muesli/duf/releases).
+
 ```
 sudo apt install duf
 ```
