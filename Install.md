@@ -58,13 +58,15 @@ flatpak install flathub io.atom.Atom
 
 ## Терминал
 
-Устанавливаем zsh:
+### 1. Устанавливаем zsh:
 
 ```sh
 sudo dnf install zsh
 chsh -s /bin/zsh
 rm ~/.bash_history ~/.bash_logout
 ```
+
+### 2. Устанавливаем цветовую схему `DimmedMonokai` c [Gogh](https://mayccoll.github.io/Gogh/).
 
 Устанавливаем Antigen:
 
