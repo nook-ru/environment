@@ -66,7 +66,7 @@ chsh -s /bin/zsh
 rm ~/.bash_history ~/.bash_logout
 ```
 
-### 2. Устанавливаем цветовую схему `DimmedMonokai` c [Gogh](https://mayccoll.github.io/Gogh/).
+### 2. Устанавливаем цветовую схему `DimmedMonokai` c [Gogh]([https://mayccoll.github.io/Gogh/](https://github.com/Gogh-Co/Gogh#-install)).
 
 Устанавливаем Antigen:
 
