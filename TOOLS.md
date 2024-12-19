@@ -18,3 +18,8 @@ https://niklan.net/blog/149
 
 * [Pinta](https://www.pinta-project.com/howto/installing-pinta)
   * Зависимость от [mono](https://www.mono-project.com/download/stable/#download-lin) 🙄
+
+### Редакторы
+
+
+* [Modern CSV](https://www.moderncsv.com/download/)
